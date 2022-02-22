@@ -1,3 +1,14 @@
 <h1>hello world</h1>
 <a href="/sign_up">New Member? Sign Up Here</a>
-<a href="/Log in">Already a Member? Log In Here</a>
+<a href="/login">Already a Member? Log In Here</a>
+
+<% if logged_in? %>
+    <h3>Welcome back adventurer <%= current_user['first_name'] %></h3>
+
+    <form action="/sessions" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button>Logout</button>
+    </form>
+
+
+<% end %>

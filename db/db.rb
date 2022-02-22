@@ -5,4 +5,4 @@ def run_sql(sql, sql_params = [])
     results = db.exec_params(sql, sql_params)
     db.close
     results
-  end
+end

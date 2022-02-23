@@ -9,7 +9,7 @@ enable :sessions
 require_relative 'db/db'
 
 
-# require_relative 'models/characters'
+require_relative 'models/character'
 require_relative 'models/user'
 
 require_relative 'controllers/characters_controllers'

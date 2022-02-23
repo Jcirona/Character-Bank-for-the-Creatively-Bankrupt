@@ -1,0 +1,20 @@
+<h1>Edit Character</h1>
+
+<form action="/characters/<%= character["id"] %>" method="POST">
+    <input type="hidden" name="_method" value="put">
+
+
+    <label for="">Name:</label>
+    <input type="text" name="name" value="<%= character["name"]%>">
+
+    <label for="">Portrait Image:</label>
+    <input type="text" name="character_portrait" value="<%= character["character_portrait"]%>">
+
+    <label for="">Race:</label>
+    <input type="text" name="race" value="<%= character["race"]%>">
+
+    <label for="">Class:</label>
+    <input type="text" name="character_class" value="<%= character["character_class"]%>">
+
+    <button>Submit Changes</button>
+</form>

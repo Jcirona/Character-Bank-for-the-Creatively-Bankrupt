@@ -1,22 +1,27 @@
-<h1>Welcome to the Character Bank for the Creatively Bankrupt!</h1>
-<a href="/sign_up">New Member? Sign Up Here</a>
-<a href="/login">Already a Member? Login Here</a>
+<header>
+    <h1 class="title">Welcome to the Character Bank for the Creatively Bankrupt!</h1>
+    <a href="/sign_up">New Member? Sign Up Here</a>
+    <a href="/login">Already a Member? Login Here</a>
 
-<% if logged_in? %>
-    <h3>Welcome back adventurer <%= current_user['first_name'] %></h3>
+    <% if logged_in? %>
+        <h3>Welcome back adventurer <%= current_user['first_name'] %></h3>
 
-    <form action="/sessions" method="POST">
-        <input type="hidden" name="_method" value="delete">
-        <button>Logout</button>
-    </form>
+        <form action="/sessions" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button>Logout</button>
+        </form>
 
-<a href="/characters/new">Create New Character</a>
+    <a href="/characters/new">Create New Character</a>
+</header>
 
+<main>
 <% characters.each do |character|%>
     <h1><%= character["name"]%></h1>
     <img src="<%= character["character_portrait"]%>" alt="">
     <h2>Race: <%= character["race"]%></h2>
     <h2>Class: <%= character["character_class"]%></h2>
+    <h2>Character Strength: <%= character["character_strength"] %></h2>
+    <h2>Character Flaw: <%= character["character_flaw"] %></h2>
 
     <a href="/characters/<%= character["id"]%>/edit">Edit Character</a>
 
@@ -25,8 +30,11 @@
 
         <button>Delete Character</button>
     
+
+
+
     </form>
+    <% end %>
 
 <% end %>
-
-<% end %>
+</main>

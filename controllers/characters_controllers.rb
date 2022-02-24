@@ -16,8 +16,10 @@ post '/characters' do
     character_portrait = params["character_portrait"]
     race = params["race"]
     character_class = params["character_class"]
+    character_strength = params["character_strength"]
+    character_flaw = params["character_flaw"]
 
-    create_character(user_id, name, character_portrait, race, character_class)
+    create_character(user_id, name, character_portrait, race, character_class, character_strength, character_flaw)
 
     redirect '/'
 end
@@ -36,8 +38,10 @@ put '/characters/:id' do
     character_portrait = params["character_portrait"]
     race = params["race"]
     character_class = params["character_class"]
+    character_strength = params["character_strength"]
+    character_flaw = params["character_flaw"]
 
-    update_character(id, name, character_portrait, race, character_class)
+    update_character(id, name, character_portrait, race, character_class, character_strength, character_flaw)
 
     redirect '/'
 end

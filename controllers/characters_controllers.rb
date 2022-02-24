@@ -32,7 +32,7 @@ post '/randomise_character' do
 
     portrait = "https://images.unsplash.com/photo-1605142859862-978be7eba909?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
 
-    races = ['Human', 'Elf', 'Dwarf', 'Halfling', 'Half-Elf']
+    races = ['Human', 'Elf', 'Dwarf', 'Halfling', 'Half-Elf', 'Gnome', ]
     random_race = races.sample
 
     player_classes = ['Fighter', 'Barbarian', 'Cleric, Wizard', 'Rogue' , 'Druid']
@@ -41,7 +41,7 @@ post '/randomise_character' do
     strengths = ['Heckin Lorge', 'Charismatic', 'Natural Leader', 'Deft', 'Can operate a vending machine']
     random_strengths = strengths.sample
 
-    flaws = ["Allergic to adventures", "Fear of gold coins", "Double Dips"]
+    flaws = ["Hates to adventures", "Fear of gold coins", "Double Dips", "Struggles to populate an array"]
     random_flaws = flaws.sample
 
     

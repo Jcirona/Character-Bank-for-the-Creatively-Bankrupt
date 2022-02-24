@@ -1,5 +1,6 @@
 <h1>Create Your Character</h1>
 
+<main class="character_new">
 <form class="new_character" action="/characters" method="POST">
     <label for="">Name: </label>
     <input type="text" name="name">
@@ -14,10 +15,11 @@
     <input type="text" name="character_class">
 
     <label for="">Character Strength: </label>
-    <input type="text" name="character_strength">
+    <input class ="new_strength" type="text" name="character_strength">
+    
 
     <label for="">Character Flaw: </label>
-    <input type="text" name="character_flaw">
+    <input class="new_flaw" type="text" name="character_flaw">
 
 
     <button>Create</button>
@@ -25,6 +27,9 @@
 
 </form>
 
+</main>
+
 <form action="/randomise_character" method="POST">
     <button>Randomise Character</button>
 </form>
+

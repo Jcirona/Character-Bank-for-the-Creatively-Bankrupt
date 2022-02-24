@@ -1,7 +1,6 @@
 <header>
     <h1 class="title">Welcome to the Character Bank for the Creatively Bankrupt!</h1>
-    <a href="/sign_up">New Member? Sign Up Here</a>
-    <a href="/login">Already a Member? Login Here</a>
+   
 
     <% if logged_in? %>
         <h3>Welcome back adventurer <%= current_user['first_name'] %></h3>
@@ -11,7 +10,10 @@
             <button>Logout</button>
         </form>
 
+    <a href="/sign_up">New Member? Sign Up Here</a>
+    <a href="/login">Already a Member? Login Here</a>
     <a href="/characters/new">Create New Character</a>
+
 </header>
 
 <main>

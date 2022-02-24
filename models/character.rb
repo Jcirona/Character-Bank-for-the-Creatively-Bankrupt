@@ -18,7 +18,7 @@ def get_character(id)
 end
 
 def update_character(id, name, character_portrait, race, character_class, character_strength, character_flaw)
-    run_sql("UPDATE characters SET name = $2, character_portrait = $3, race = $4, character_class = $5, character_strength = $6, character_flaw = $7 WHERE id = $1", [id, name, character_portrait, race, character_class])
+    run_sql("UPDATE characters SET name = $2, character_portrait = $3, race = $4, character_class = $5, character_strength = $6, character_flaw = $7 WHERE id = $1", [id, name, character_portrait, race, character_class, character_strength, character_flaw])
 end
 
 def delete_character(id)
